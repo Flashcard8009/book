@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><title>React 进阶实践指南 | 掘金小册</title><link rel="stylesheet" type="text/css" href="/book/css/style.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/latest/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/latest/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/latest/grids-responsive-min.min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/latest/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/book/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/book/favicon.ico"><link rel="apple-touch-icon" href="/book/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/book/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/book/atom.xml"><script type="text/javascript" src="//lib.baomitu.com/clipboard.js/latest/clipboard.min.js"></script><script type="text/javascript" src="//lib.baomitu.com/toastr.js/latest/toastr.min.js"></script><link rel="stylesheet" href="//lib.baomitu.com/toastr.js/latest/toastr.min.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">React 进阶实践指南</h1><a id="logo" href="/book/.">掘金小册</a><p class="description">学海无涯，共同进步！</p></div><div id="nav-menu"><a class="current" href="/book/."><i class="fa fa-home"> 首页</i></a><a href="/book/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/book/about/"><i class="fa fa-user"> 关于</i></a><a href="/book/atom.xml"><i class="fa fa-rss"> 订阅</i></a><a href="/book/guestbook/"><i class="fa fa-comments"> 留言</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">React 进阶实践指南</h1><div class="post-meta">2023-09-26<span> | </span><span class="category"><a href="/book/categories/%E9%BB%98%E8%AE%A4/">默认</a></span><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span><span class="post-time"><span class="post-meta-item-text"> | </span><span class="post-meta-item-icon"><i class="fa fa-keyboard-o"></i><span class="post-count"> 1.5k</span><span class="post-meta-item-text"> 字</span></span></span><span class="post-time"> | <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i><span class="post-count"> 5</span><span class="post-meta-item-text"> 分钟</span></span></span></div><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%A0%E4%BC%9A%E5%AD%A6%E5%88%B0%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">你会学到什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E8%80%85%E4%BB%8B%E7%BB%8D"><span class="toc-text">作者介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E5%86%8C%E4%BB%8B%E7%BB%8D"><span class="toc-text">小册介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97"><span class="toc-text">更新日志</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Q-A"><span class="toc-text">Q&amp;A</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%82%E5%AE%9C%E4%BA%BA%E7%BE%A4"><span class="toc-text">适宜人群</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%AD%E4%B9%B0%E9%A1%BB%E7%9F%A5"><span class="toc-text">购买须知</span></a></li></ol></div></div><div class="post-content"><p><img src="https://raw.githubusercontent.com/Flashcard8009/image/main/img/202309261913477.png"></p>
+<blockquote>
+<p>本小册会<strong>持续更新</strong>，其中原理部分也随着 React 版本升级逐渐更新，当然 React 18 系列也包括在内。在介绍底部可查看更新日志 😊</p>
+</blockquote>
+<h2 id="你会学到什么？"><a href="#你会学到什么？" class="headerlink" title="你会学到什么？"></a>你会学到什么？</h2><ul>
+<li>1 jsx 到 fiber 的转换流程，以及如何操纵 React element 元素。</li>
+<li>2 React 核心基础模块的原理、使用以及进阶，比如 state、props、ref、context 等。</li>
+<li>3 所有常用 React Hooks 的原理，以及合理使用、编写自定义 Hook 的方法。</li>
+<li>4 如何在 React 应用中进行 CSS 模块化。</li>
+<li>5 控制 React 渲染的方法，以及性能优化手段。</li>
+<li>6 生态 React Router、React Redux、React Mobx 的详细解读。</li>
+<li>7 React 应用中海量数据的处理方案。</li>
+<li>8 React 封装组件实践，以及高阶组件的原理和使用方法。</li>
+<li>9 React 面试常见问题及答案解析。</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Flashcard8009/image/main/img/202309261913774.awebp" alt="React 进阶指南.jpg"></p>
+<h2 id="作者介绍"><a href="#作者介绍" class="headerlink" title="作者介绍"></a>作者介绍</h2><p><a target="_blank" rel="noopener" href="https://juejin.cn/user/2418581313687390">我不是外星人</a>，一线大厂资深研发工程师。精通 React 技术，通读 React 源码，擅长大型应用架构设计、C 端性能优化、小程序跨端开发等领域，曾负责千万级别 PV 的 C 端交易链路。</p>
+<p>热爱技术输出：</p>
+<ul>
+<li>出版图书《深入浅出 React 开发指南》</li>
+<li>撰写掘金小册《<a target="_blank" rel="noopener" href="https://juejin.cn/book/7198721537938030649/section">大前端跨端开发指南</a>》</li>
+<li>开发过两个开源项目：<ul>
+<li><a href="https://link.juejin.cn/?target=https://github.com/GoodLuckAlien/react-keepalive-router">react-keepalive-router-缓存页面</a></li>
+<li><a href="https://link.juejin.cn/?target=https://github.com/GoodLuckAlien/ruxjs">ruxjs-状态管理工具</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="小册介绍"><a href="#小册介绍" class="headerlink" title="小册介绍"></a>小册介绍</h2><p>在正式读《React 进阶实践指南》小册之前，我有必要和大家说清楚写这本小册的初衷。</p>
+<p>我们在使用 React 去开发项目，周而复始地写着业务逻辑的时候，难免会遇到技术瓶颈期，比如：</p>
+<ul>
+<li>对于 React 技术栈，不知道该怎么去突破、进阶；</li>
+<li>搞不懂 React 运的行机制；</li>
+<li>想知道怎么给 React 做性能优化、封装组件；</li>
+<li>……</li>
+</ul>
+<p>笔者就亲身经历过这样的迷茫期，后来通过系统化复习，先逐一突破 React 的各个模块，再把各个模块串联到一起，才慢慢体验到 React 魅力所在，越深入的学习，我就发现了越多精彩的内容。</p>
+<p>因此，我在这个小册中，把自己的学习经验和心得总结了出来，从基础篇、优化篇、原理篇、生态篇和实践篇，这五个方向和大家详细探讨 React 的原理，并梳理出一份使用指南。</p>
+<ul>
+<li>基础篇：重新认识 React 中 state、props、ref、context 等模块，详解其基本使用和高阶玩法。</li>
+<li>优化篇：讲解 React 性能调优和细节处理，让你写出更优雅的 React 代码。</li>
+<li>原理篇：将针对 React 几个核心模块原理进行阐述，一次性搞定面试中遇到 React 原理问题。</li>
+<li>生态篇：将重温 React 重点生态的用法，从原理角度分析内部运行的机制。</li>
+<li>实践篇：串联前几个模块，进行强化实践。</li>
+</ul>
+<h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h2><p>这里发布最新的小册更新日志：</p>
+<ul>
+<li><strong>📢《React 进阶实践指南》章节重构通知</strong></li>
+</ul>
+<p>第十七章调和与fiber 将去掉调和部分，放在后面章节整合。取而代之的是分成三篇&lt;架构篇&gt;，让章节内容关联紧密，承上启下，帮助大家更方便理解原理篇。</p>
+<p>第一篇：React fiber，介绍react的虚拟DOM fiber，以及fiber树的构成。<br>第二篇：react位运算以及三种应用、lane模型，运行时context模型和flag模型。<br>第三篇：数据更新流程设计。</p>
+<p>新章节标题中，会有 🔥 火焰标识。</p>
+<ul>
+<li><strong>2023年1月8日：新增章节数据更新流程设计。</strong></li>
+<li><strong>2022年10月7日：新增章节 React 新事件原理。🔥</strong></li>
+<li><strong>2022年9月2日：新增章节 React 位运算。🎆</strong></li>
+<li><strong>2022年8月6日：新增章节 v18 Suspense 新特性。🚗</strong></li>
+<li><strong>2022年7月21日： 新增章节 设计并实现 keepalive 功能。🍉</strong></li>
+<li><strong>2022年5月22日： 新增章节 v18 commit流程。🪐</strong></li>
+<li><strong>2022年5月15日： 新增章节 useInsertionEffect的使用。</strong> 🌍</li>
+<li><strong>2022年5月4日：新增章节 订阅外部数据源。☀️</strong></li>
+<li><strong>2022年4月9日：更新 jsx ，增加了 Babel 解析 JSX 流程。💐</strong></li>
+<li><strong>2022年3月6日： 新增章节 v18特性篇-concurrent 下的 state更新流程。🏯</strong></li>
+<li><strong>2021年11月21日：新增章节原理篇—更新流程：进入调度任务。🍉</strong></li>
+<li><strong>2021年11月8日： 新增章节 v18新特性之transition。🎈</strong></li>
+<li><strong>2021年11月2日，新增章节 v18新特性之useMutableSource。 🌛</strong></li>
+<li><strong>2021年10月28日，新增章节 beginWork和render全流程。🪐</strong></li>
+<li><strong>2021年10月17日，更新 hooks 章节，建议不要在 hooks 的参数中执行函数或者 new 实例。👽</strong></li>
+<li><strong>2021年9月22日，小册新增章节 context 原理。🏠</strong></li>
+<li><strong>2021年8月15日，小册更新章节，增加 Ref 原理补充部分。ref 创建，更新，删除流程。 🔧</strong></li>
+</ul>
+<h3 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h3><p><strong>Q1:</strong> 为什么叫<strong>进阶实践</strong>指南？</p>
+<p><strong>A1:</strong> 答：小册在讲解 React 的基础和进阶用法基础上，也会有很多小的实践 Demo ，对基础知识点进行巩固和强化。</p>
+<p><strong>Q2:</strong> 通过本小册如何应对面试？</p>
+<p><strong>A2:</strong> 答：本小册每一章节中，都会对面试中常见的 React 问题进行阐述和整理，结合<strong>问+答</strong>环节，让你能够在面试中脱颖而出。</p>
+<h2 id="适宜人群"><a href="#适宜人群" class="headerlink" title="适宜人群"></a>适宜人群</h2><ul>
+<li>了解 React 基础用法，接触过 React 的技术同学。</li>
+<li>想要系统学习 React，进阶技术栈，深入了解 React 原理的同学。</li>
+<li>想要跳槽，攻克 React 面试知识点的同学。</li>
+</ul>
+<h2 id="购买须知"><a href="#购买须知" class="headerlink" title="购买须知"></a>购买须知</h2><ol>
+<li>本小册为图文形式虚拟内容服务，购买成功概不退款；</li>
+<li>小册于 2021 年 7 月 12 日上线，全部章节现已完成更新；</li>
+<li>购买用户可享有永久阅读权限，可进入小册微信群，与作者互动；</li>
+<li>掘金小册版权归北京北比信息技术有限公司所有，任何机构、媒体、网站或个人未经本网协议授权不得转载、链接、转贴或以其他方式复制发布&#x2F;发表，违者将依法追究责任；</li>
+<li>在掘金小册阅读过程中，如有任何问题，请邮件联系 <a href="mailto:xiaoce@xitu.io">xiaoce@xitu.io</a></li>
+</ol>
+</div><div class="tags"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/book/tags/React/" rel="tag">React</a></li></ul></div><div class="post-nav"><a class="next" href="/book/2023/chapter-05-basic-chapter-deep-tips/">第05章—基础篇-深入props</a></div><script src="https://utteranc.es/client.js" repo="Flashcard8009/book" issue-term="pathname" theme="github-light" crossorigin="anonymous" async></script></div></div></div><div class="pure-u-1 pure-u-md-1-4"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="author-info"><a class="info-avatar" href="/about/" title="关于"><img class="nofancybox" src="https://avatars.githubusercontent.com/Flashcard8009"/></a><p>To be a better man.</p><a class="info-icon" href="https://github.com/Flashcard8009" title="Github" target="_blank" style="margin-inline:5px"> <i class="fa fa-github-square" style="margin-inline:5px"></i></a><a class="info-icon" href="/atom.xml" title="RSS" target="_blank" style="margin-inline:5px"> <i class="fa fa-rss-square" style="margin-inline:5px"></i></a><a class="info-icon" href="https://github.com/username" title="Github" target="_blank" style="margin-inline:5px"> <i class="fa fa-github-square" style="margin-inline:5px"></i></a><a class="info-icon" href="/atom.xml" title="RSS" target="_blank" style="margin-inline:5px"> <i class="fa fa-rss-square" style="margin-inline:5px"></i></a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/book/categories/%E9%BB%98%E8%AE%A4/">默认</a><span class="category-list-count">43</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/book/tags/React/" style="font-size: 15px;">React</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/book/2023/book__react-advanced-practice-guide/">React 进阶实践指南</a></li><li class="post-list-item"><a class="post-list-link" href="/book/2023/chapter-05-basic-chapter-deep-tips/">第05章—基础篇-深入props</a></li><li class="post-list-item"><a class="post-list-link" href="/book/2023/chapter-04-basic-chapter-metaphysics-state/">第04章—基础篇-玄学state</a></li><li class="post-list-item"><a class="post-list-link" href="/book/2023/chapter-07-basic-chapter-multifunctional-ref/">第07章—基础篇-多功能Ref</a></li><li class="post-list-item"><a class="post-list-link" href="/book/2023/chapter-06-basic-chapter-understanding-lifecycle/">第06章—基础篇-理解lifeCycle</a></li><li class="post-list-item"><a class="post-list-link" href="/book/2023/chapter-08-basic-chapter-provider-context/">第08章—基础篇-提供者context</a></li><li class="post-list-item"><a class="post-list-link" href="/book/2023/chapter-09-fundamentals-modular-css/">第09章—基础篇-模块化css</a></li><li class="post-list-item"><a class="post-list-link" href="/book/2023/chapter-10-fundamentals-advanced-components/">第10章—基础篇-高阶组件</a></li><li class="post-list-item"><a class="post-list-link" href="/book/2023/chapter-12-optimization-chapter-rendering-tuning/">第12章—优化篇-渲染调优</a></li><li class="post-list-item"><a class="post-list-link" href="/book/2023/chapter-11-optimization-rendering-control/">第11章—优化篇-渲染控制</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="/" title="中文博客" target="_blank">中文博客</a><ul></ul><a href="/en" title="EN Blog" target="_blank">EN Blog</a><ul></ul><a href="https://github.com/Flashcard8009" title="GitHub" target="_blank">GitHub</a><ul></ul><a href="https://www.baidu.com/" title="百度" target="_blank">百度</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2023 <a href="/book/." rel="nofollow">掘金小册.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/book/js/totop.js?v=1.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/latest/jquery.fancybox.min.js"></script><script type="text/javascript" src="/book/js/fancybox.js?v=1.0.0"></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/latest/jquery.fancybox.min.css"><link rel="stylesheet" type="text/css" href="/book/css/search.css?v=1.0.0"><script type="text/javascript" src="/book/js/search.js?v=1.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+  search_path = 'search.xml';
+}
+var path = '/book/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="/book/js/copycode.js?v=1.0.0" successtext="复制成功！"></script><link rel="stylesheet" type="text/css" href="/book/css/copycode.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="/book/css/external.css?v=1.0.0"><script type="text/javascript" src="/book/js/codeblock-resizer.js?v=1.0.0"></script><script type="text/javascript" src="/book/js/smartresize.js?v=1.0.0"></script></div></body></html>
