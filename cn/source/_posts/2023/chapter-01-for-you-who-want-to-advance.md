@@ -1,6 +1,6 @@
 ---
-title: 为什么学习React？
-subtitle: Why study React?
+title: 第01章—写给想要进阶的你
+subtitle: Chapter 01- For You Who Want to Advance
 date: 2023-09-26 15:31:43
 toc: true
 tags: React
