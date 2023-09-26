@@ -1,0 +1,61 @@
+utterances: ## See: https://utteranc.es
+  enable: true ## If you want to use Utterances comment system, please set the value to true.
+  repo: Flashcard8009/book ## The repository utterances will connect to, e.g. tufu9441/comments
+  identifier: pathname ## The mapping between blog posts and GitHub issues.
+
+google_search: false ## Use Google search, true/false.
+self_search: true ## Use a jQuery-based local search engine, true/false.
+google_analytics: ## Your Google Analytics tracking id, e.g. UA-42425684-2
+baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
+show_category_count: true ## If you want to show the count of categories in the sidebar widget please set the value to true.
+toc_number: false ## If you want to add list number to toc please set the value to true.
+busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
+wordcount: true ## If you want to display the word counter and the reading time expected to spend of each post please set the value to true, and you must have hexo-wordcount installed.
+widgets_on_small_screens: true ## Set to true to enable widgets on small screens.
+external_css: true ## If you want to load an external CSS file, set the value to true and create a file named "external.css" in the source/css folder.
+
+menu:
+  - page: home
+    directory: .
+    icon: fa-home
+  - page: archive
+    directory: archives/
+    icon: fa-archive
+  - page: about
+    directory: about/
+    icon: fa-user
+  - page: rss
+    directory: atom.xml
+    icon: fa-rss
+  - page: guestbook
+    directory: guestbook/
+    icon: fa-comments
+
+info:
+  avatar: https://avatars.githubusercontent.com/Flashcard8009
+  discription: To be a better man.
+  outlinkitem:
+    - name: github
+      outlink: https://github.com/Flashcard8009
+      message: Github
+    - name: rss
+      outlink: /atom.xml
+      message: RSS
+
+links:
+  - title: 中文博客
+    desc: 中文博客
+    url: /
+    src: /
+  - title: EN Blog
+    desc: EN Blog
+    url: /en
+    src: /en
+  - title: GitHub
+    desc: GitHub
+    url: https://github.com/Flashcard8009
+    src: https://github.com/Flashcard8009
+  - title: 百度
+    desc: 百度
+    url: https://www.baidu.com/
+    src: https://www.baidu.com/

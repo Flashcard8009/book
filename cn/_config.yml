@@ -1,0 +1,14 @@
+title: void(1)
+subtitle: 学海无涯，共同进步！
+language: zh-CN
+timezone: Asia/Shanghai
+
+url: https://Flashcard8009.github.io
+permalink: :title/
+
+archive_generator:
+  per_page: 25
+
+theme: maupassant
+
+public_dir: ../public
